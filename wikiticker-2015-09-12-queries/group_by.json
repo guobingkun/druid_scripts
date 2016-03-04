@@ -1,0 +1,22 @@
+{
+   "queryType":"groupBy",
+   "dataSource":"wikipedia_index_test",
+   "granularity":{"type": "period", "period": "PT1H"},
+   "dimensions":[
+      "namespace"
+   ],
+   "aggregations":[
+      {
+         "type":"count",
+         "name":"rows"
+      },
+      {
+         "type":"doubleSum",
+         "fieldName":"delta",
+         "name":"sum of delta"
+      }
+   ],
+   "intervals":[
+      "2015-09-12T00:00/2015-09-12T02:00"
+   ]
+}

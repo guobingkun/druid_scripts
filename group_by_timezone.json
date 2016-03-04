@@ -1,0 +1,17 @@
+{
+   "queryType":"groupBy",
+   "dataSource":"wikipedia",
+   "granularity":{"type": "period", "period": "P1D"},
+   "dimensions":[
+      "language"
+   ],
+   "aggregations":[
+      {
+         "type":"count",
+         "name":"count"
+      }
+   ],
+   "intervals":[
+      "2013-08-31T00:00:00Z/2013-09-11T00:00:00Z"
+   ]
+}

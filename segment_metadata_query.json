@@ -1,0 +1,6 @@
+{
+  "queryType":"segmentMetadata",
+  "dataSource":"wikipedia",
+  "intervals":["2015-11-14/2015-11-16"],
+  "analysisTypes":[]
+}

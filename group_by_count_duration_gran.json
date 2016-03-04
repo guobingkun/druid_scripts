@@ -1,0 +1,17 @@
+{
+   "queryType":"groupBy",
+   "dataSource":"wikipedia",
+   "granularity":{"type": "duration", "duration": "129600000"},
+   "dimensions":[
+      "language"
+   ],
+   "aggregations":[
+      {
+         "type":"count",
+         "name":"count"
+      }
+   ],
+   "intervals":[
+      "2013-06-01T00:00/2020-01-01T00"
+   ]
+}

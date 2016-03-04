@@ -1,0 +1,43 @@
+{
+    "type": "index",
+    "spec": {
+        "dataSchema": {
+            "dataSource": "wikipedia_3",
+            "metricsSpec": [
+                {
+                    "type": "count",
+                    "name": "count"
+                }
+            ],
+            "granularitySpec": {
+                "segmentGranularity": "DAY",
+                "queryGranularity": "second",
+                "intervals" : [ "2013-08-31/2013-09-12" ]
+            },
+            "parser": {
+                "parseSpec": {
+                    "format" : "json",
+                    "timestampSpec": {
+                        "column": "timestamp"
+                    },
+                    "dimensionsSpec": {
+                        "dimensions": [
+                            "page", "language"
+                        ]
+                    }
+                }
+            }
+        },
+        "ioConfig": {
+            "type": "index",
+            "firehose": {
+                "type": "local",
+                "baseDir": "/Users/guobingkun/Documents/tmp/wikipedia_play/",
+                "filter": "wikipedia_one_day_data.json"
+            }
+        },
+        "tuningConfig": {
+            "type": "index"
+        }
+    }
+}

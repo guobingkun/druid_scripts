@@ -1,0 +1,22 @@
+{
+   "queryType":"groupBy",
+   "dataSource":"wikipedia",
+   "granularity":{"type": "period", "period": "PT36H"},
+   "dimensions":[
+      "language"
+   ],
+   "aggregations":[
+      {
+         "type":"count",
+         "name":"rows"
+      },
+      {
+         "type":"doubleSum",
+         "fieldName":"delta",
+         "name":"sum of delta"
+      }
+   ],
+   "intervals":[
+      "2013-06-01T00:00/2020-01-01T00"
+   ]
+}

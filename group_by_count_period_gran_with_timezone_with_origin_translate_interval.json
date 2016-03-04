@@ -1,0 +1,17 @@
+{
+   "queryType":"groupBy",
+   "dataSource":"wikipedia",
+   "granularity":{"type": "period", "period": "PT36H", "timeZone": "America/Los_Angeles", "origin": "1970-01-01T00:00:00-07:00"},
+   "dimensions":[
+      "language"
+   ],
+   "aggregations":[
+      {
+         "type":"count",
+         "name":"count"
+      }
+   ],
+   "intervals":[
+      "2013-08-31T00:00:00Z/2013-09-11T00:00:00Z"
+   ]
+}
